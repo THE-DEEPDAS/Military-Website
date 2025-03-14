@@ -5,10 +5,14 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-client && npm run build-server",
-    "build-client": "react-scripts build",
+    "build": "npm install && node server.js",
+    "build-client": "cd .. && cd client && npm run build",
     "build-server": "echo \"Building server...\"",
-    "start": "node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "dev": "nodemon server.js",
+    "client": "cd client && npm start",
+    "server": "node server.js",
+    "start:all": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -23,5 +27,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3",
     "react-toastify": "^10.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "concurrently": "^8.2.2"
   }
 }
