@@ -1,0 +1,27 @@
+{
+  "name": "military_website",
+  "version": "1.0.0",
+  "description": "A community-driven Military platform built on the MERN stack.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "react-scripts build",
+    "build-server": "echo \"Building server...\"",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/react": "^8.26.0",
+    "@sentry/tracing": "^7.114.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.3",
+    "react-toastify": "^10.0.5"
+  }
+}
